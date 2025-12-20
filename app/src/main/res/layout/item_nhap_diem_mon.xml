@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="#FFFFFF"
+    android:elevation="2dp">
+
+    <!-- Tên môn học -->
+    <TextView
+        android:id="@+id/tvTenMon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Toán Học"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <!-- Ô nhập điểm -->
+    <EditText
+        android:id="@+id/edtDiemMon"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="Điểm..."
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:background="@android:drawable/edit_text"/>
+
+</LinearLayout>

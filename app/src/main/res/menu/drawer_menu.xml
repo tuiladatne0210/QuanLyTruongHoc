@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_lop" android:title="Quản lý Lớp" android:icon="@android:drawable/ic_menu_sort_by_size"/>
+    <item android:id="@+id/nav_hocsinh" android:title="Quản lý Học Sinh" android:icon="@android:drawable/ic_menu_my_calendar"/>
+    <item android:id="@+id/nav_diem" android:title="Quản lý Điểm" android:icon="@android:drawable/ic_menu_edit"/>
+    <item android:id="@+id/nav_hanhkiem" android:title="Khen Thưởng/Kỷ Luật" android:icon="@android:drawable/ic_menu_info_details"/>
+    <item android:id="@+id/nav_tinh_nhanh" android:title="Tính Điểm Nhanh" android:icon="@android:drawable/ic_menu_help"/>
+    <item android:id="@+id/nav_logout" android:title="Đăng xuất" android:icon="@android:drawable/ic_lock_power_off"/>
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:text="NHẬP ĐIỂM HỌC SINH"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#673AB7"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- 1. Chọn Lớp -->
+    <TextView
+        android:text="1. Chọn Lớp:"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnChonLop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- 2. Chọn Học Sinh (Sẽ thay đổi theo Lớp) -->
+    <TextView
+        android:text="2. Chọn Học Sinh:"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnChonHS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- 3. Chọn Loại Điểm -->
+    <TextView
+        android:text="3. Chọn Loại Điểm:"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnLoaiDiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- Danh sách môn học để nhập -->
+    <TextView
+        android:text="Nhập điểm các môn:"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- RecyclerView chứa danh sách môn -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMonHocInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F0F0F0"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"/>
+
+    <Button
+        android:id="@+id/btnLuuTatCa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lưu Tất Cả Điểm"
+        android:backgroundTint="#673AB7"
+        android:textColor="#FFF"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

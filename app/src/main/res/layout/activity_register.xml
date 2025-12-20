@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ĐĂNG KÝ"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/edtUserReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên đăng nhập" />
+
+    <EditText
+        android:id="@+id/edtPassReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnRegisterAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng Ký Ngay"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvBackLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay lại đăng nhập"
+        android:layout_marginTop="15dp"
+        android:textColor="#0000FF"/>
+</LinearLayout>

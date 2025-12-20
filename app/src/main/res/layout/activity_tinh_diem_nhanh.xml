@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:text="THỐNG KÊ ĐIỂM THEO LOẠI"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#009688"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Chọn Lớp -->
+    <TextView text="1. Chọn Lớp:" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnChonLop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Chọn Học Sinh -->
+    <TextView text="2. Chọn Học Sinh:" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnChonHS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Chọn Loại Điểm (MỚI) -->
+    <TextView text="3. Chọn Loại Điểm cần xem:" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spnLoaiKiemTra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- Nút Xem -->
+    <Button
+        android:id="@+id/btnXemDiem"
+        android:text="Xem và Tính Trung Bình"
+        android:backgroundTint="#009688"
+        android:textColor="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Danh sách điểm (Thay thế cho các ô nhập tay cũ) -->
+    <TextView
+        android:text="Danh sách môn và điểm:"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDiemHienThi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <!-- Kết quả tổng hợp -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E0F2F1"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtKetQua"
+            android:text="Trung Bình: ..."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#D84315"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtXepLoai"
+            android:text="Xếp loại: ..."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
