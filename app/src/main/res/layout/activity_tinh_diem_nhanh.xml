@@ -4,7 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhóm 4 - Lê Tuấn Dũng"
+        android:textColor="#FF0000"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#FFEB3B"
+        android:layout_marginBottom="16dp"/>
     <TextView
         android:text="THỐNG KÊ ĐIỂM THEO LOẠI"
         android:textSize="22sp"

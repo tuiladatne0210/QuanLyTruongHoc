@@ -23,26 +23,20 @@ class LoginActivity : AppCompatActivity() {
             val db = AppDatabase.getDatabase(this)
 
             btnLogin.setOnClickListener {
-                try {
-                    val user = edtUser.text.toString().trim()
-                    val pass = edtPass.text.toString().trim()
 
-                    if (user.isEmpty() || pass.isEmpty()) {
-                        Toast.makeText(this, "Vui lòng nhập đủ thông tin!", Toast.LENGTH_SHORT).show()
-                    } else {
-                        val account = db.appDao().loginUser(user, pass)
-                        if (account != null) {
-                            Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, HomeActivity::class.java))
-                            finish()
-                        } else {
-                            Toast.makeText(this, "Sai tên đăng nhập hoặc mật khẩu!", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    Toast.makeText(this, "Lỗi đăng nhập: ${e.message}", Toast.LENGTH_SHORT).show()
+                val user = db.appDao().loginUser(
+                    edtUser.text.toString().trim(),
+                    edtPass.text.toString().trim()
+                )
+                if(user == null){
+                    Toast.makeText(this, "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
                 }
+               val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("ROLE", user.role)
+                intent.putExtra("USERNAME", user.username)
+                startActivity(intent)
+                finish()
             }
 
             tvRegister.setOnClickListener {

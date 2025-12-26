@@ -11,18 +11,22 @@ import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     lateinit var drawerLayout: DrawerLayout
+    lateinit var navView: NavigationView
+    lateinit var role: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        role = intent.getStringExtra("ROLE") ?: "student"
+
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         drawerLayout = findViewById(R.id.drawer_layout)
-        val navView = findViewById<NavigationView>(R.id.nav_view)
+        navView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
-
+        setPermission()
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
             R.string.navigation_drawer_open, R.string.navigation_drawer_close // Cần thêm chuỗi này vào strings.xml hoặc dùng cứng
@@ -45,5 +49,23 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+    private fun setPermission(){
+        val menu = navView.menu
+
+        when(role.lowercase()){
+            "admin" -> {
+                //admin: toan quyen
+            }
+            "teacher" -> {
+                menu.findItem(R.id.nav_lop).isVisible = false
+                menu.findItem(R.id.nav_hocsinh).isVisible = false
+            }
+            "student" -> {
+                menu.findItem(R.id.nav_lop).isVisible = false
+                menu.findItem(R.id.nav_hocsinh).isVisible = false
+                menu.findItem(R.id.nav_diem).isVisible = false
+            }
+        }
     }
 }

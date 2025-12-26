@@ -17,7 +17,8 @@ interface AppDao {
 
     @Query("SELECT * FROM lop_hoc")
     fun getAllLop(): List<LopHoc>
-
+    @Update
+    fun suaLop(lop: LopHoc)
     @Delete
     fun xoaLop(lop: LopHoc)
 

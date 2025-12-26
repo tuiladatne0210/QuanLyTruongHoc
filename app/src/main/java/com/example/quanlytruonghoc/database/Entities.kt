@@ -6,15 +6,17 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "users")
 data class User(
     @PrimaryKey val username: String,
-    val password: String
+    val password: String,
+    val role: String // "admin", "teacher", "student
 )
 
 @Entity(tableName = "lop_hoc")
 data class LopHoc(
     @PrimaryKey val maLop: String,
-    val tenLop: String
+    val tenLop: String,
+    val giaoVien: String
 ) {
-    override fun toString(): String = tenLop
+    override fun toString(): String = "$tenLop - $giaoVien"
 }
 
 @Entity(tableName = "hoc_sinh")

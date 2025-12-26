@@ -4,27 +4,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
-
     <TextView
-        android:text="QUẢN LÝ LỚP HỌC"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
-
+        android:text="Nhóm 4 - Nguyễn Hữu Chúc"
+        android:textColor="#FF0000"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#FFEB3B"
+        android:layout_marginBottom="16dp"/>
     <EditText
         android:id="@+id/edtTenLop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nhập tên lớp (VD: 12A1)" />
-
-    <Button
-        android:id="@+id/btnThemLop"
+    <EditText
+        android:id="@+id/edtGiaoVien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Thêm Lớp" />
+        android:hint="Nhập tên GVCN..." />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btnThemLop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Thêm Lớp" />
+        <Button
+            android:id="@+id/btnXoaLop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Xóa Lớp" />
+        <Button
+            android:id="@+id/btnSuaLop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sửa Lớp" />
+    </LinearLayout>
+
+
 
     <TextView
         android:text="Danh sách lớp (Nhấn giữ để xóa):"
